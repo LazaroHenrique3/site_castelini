@@ -7,3 +7,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Esconde a barra de rolagem */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Para o IE e Edge */
+  scrollbar-width: none; /* Para o Firefox */
+}
+
+/* Definir estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor de fundo da trilha da barra */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D73D53; /* Cor do "thumb" (parte da barra que se move) */
+  border-radius: 10px;
+  transition: background 0.3s ease; /* Suavizar a transição */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b42d42; /* Cor do "thumb" quando hover */
+}
