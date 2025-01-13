@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(public-pages)/home/internal-components/banner-carrousel", "src/components/home/banner-carrousel", "src/components/home/our-brands"],
   "exclude": ["node_modules"]
 }
