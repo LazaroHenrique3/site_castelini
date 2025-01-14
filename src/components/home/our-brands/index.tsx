@@ -34,6 +34,11 @@ import paco from '../../../../public/images/brands/paco.png'
 import viaMarte from '../../../../public/images/brands/via-marte.png'
 import vizzano from '../../../../public/images/brands/vizzano.png'
 import westCoast from '../../../../public/images/brands/west-coast.png'
+import klin from '../../../../public/images/brands/klin.png'
+import hering from '../../../../public/images/brands/hering.png'
+import olympikus from '../../../../public/images/brands/olympikus.png'
+import piccadilly from '../../../../public/images/brands/piccadilly.png'
+import fila from '../../../../public/images/brands/fila.png'
 
 interface IBransSwiperImagesType {
     urlImage: StaticImageData;
@@ -62,6 +67,11 @@ const bannerImages: IBransSwiperImagesType[] = [
     { urlImage: viaMarte, description: 'logo-via-marte' },
     { urlImage: vizzano, description: 'logo-vizzano' },
     { urlImage: westCoast, description: 'logo-west-coast' },
+    { urlImage: klin, description: 'logo-klin' },
+    { urlImage: hering, description: 'logo-hering' },
+    { urlImage: olympikus, description: 'logo-olympikus' },
+    { urlImage: piccadilly, description: 'logo-piccadily' },
+    { urlImage: fila, description: 'logo-fila' },
 ];
 
 export const OurBrands = () => {

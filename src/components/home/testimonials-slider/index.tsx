@@ -53,7 +53,6 @@ export const TestimonialsSlider = () => {
     return (
         <div className='w-full h-[680px]  swiper-container testimonials'>
             <Swiper
-                slidesPerView={3}
                 spaceBetween={30}
                 freeMode={true}
                 autoplay={{
