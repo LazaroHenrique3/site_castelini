@@ -1,0 +1,24 @@
+.products .mySwiper {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+
+.products .mySwiper .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    margin-top: 10px;
+}
+
+.products .swiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.products .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
