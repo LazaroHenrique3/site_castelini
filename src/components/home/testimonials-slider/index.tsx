@@ -20,7 +20,7 @@ const testimonials: ITestimonialProp[] = [
         customer: "João Silva"
     },
     {
-        testimonialText: "Adorei o serviço! A entrega foi rápida e o produto chegou em perfeito estado.",
+        testimonialText: "Adorei o serviço! A entrega foi rápida e o produto chegou em perfeito estado sssssssssss ssssssssssssssssssssssssssss ssssssssssssssssss ssssssssssssssssssssssssssssssssss.",
         customer: "Maria Oliveira"
     },
     {
@@ -51,7 +51,7 @@ const testimonials: ITestimonialProp[] = [
 
 export const TestimonialsSlider = () => {
     return (
-        <div className='w-full h-[680px]  swiper-container testimonials'>
+        <div className='w-full h-[680px] swiper-container testimonials'>
             <Swiper
                 spaceBetween={30}
                 freeMode={true}
@@ -62,7 +62,7 @@ export const TestimonialsSlider = () => {
                 pagination={{
                     clickable: true,
                 }}
-                modules={[FreeMode, Autoplay, Pagination ]}
+                modules={[FreeMode, Pagination ]}
                 className="mySwiper"
                 breakpoints={{
                     640: {

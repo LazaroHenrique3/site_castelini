@@ -28,7 +28,7 @@ export function StoresSection() {
                                 <div className="h-[3px] w-6 bg-primary-red"></div>
                             </div>
 
-                            <p className="text-justify text-lg mb-6">
+                            <p className="text-justify text-lg mb-6 leading-relaxed">
                                 Ao longo dos anos, a marca expandiu sua presença, chegando a 25 lojas em três estados: Paraná (PR),
                                 Mato Grosso do Sul (MS) e Mato Grosso (MT). Cada uma dessas lojas foi cuidadosamente planejada para oferecer
                                 aos nossos clientes uma experiência única, com moda de qualidade e conforto para toda a família.

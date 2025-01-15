@@ -20,7 +20,7 @@ export const AboutSection = () => (
                             <div className="h-[3px] w-6 bg-primary-red"></div>
                         </div>
 
-                        <p className="text-justify text-lg mb-6">
+                        <p className="text-justify text-lg mb-6 leading-relaxed">
                             Em setembro de 1985, na cidade de Douradina-PR, dois casais da mesma família 
                             decidiram empreender juntos, nascia a Castelini Confecções. Com o passar do tempo 
                             o negócio começou a crescer, e novas unidades começaram a serem abertas, nas 
