@@ -6,7 +6,7 @@ export function FeaturedProductsSection() {
         <section className="w-full pb-16">
             <div className="w-full">
                 <div className="w-[80%] m-auto">
-                    <div className="mb-6">
+                    <div className="mb-2">
                         <h2 className="text-2xl font-bold text-gray-800 uppercase">
                             PRODUTOS EM DESTAQUE
                         </h2>

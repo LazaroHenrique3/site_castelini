@@ -5,8 +5,8 @@ import vestidoCaneladoColcciHover from '../../../../public/images/products/vesti
 
 export const ProductCardSlider = () => {
     return (
-        <div className='shadow-xl rounded-lg bg-white w-64 transition-transform duration-300 hover:scale-105'>
-            <div className="group relative w-64 h-96 bg-gray-200 overflow-hidden rounded-tl-lg rounded-tr">
+        <div className='cursor-pointer shadow-xl rounded-lg bg-white w-54 transition-transform duration-300 hover:scale-105'>
+            <div className="group relative w-54 h-[364px] bg-gray-200 overflow-hidden rounded-tl-lg rounded-tr">
                 <Image
                     src={vestidoCaneladoColcci}  // Imagem padrão
                     alt="Imagem Padrão"
@@ -24,7 +24,7 @@ export const ProductCardSlider = () => {
             </div>
 
             <div className="p-3">
-                <p className="uppercase font-semibold">
+                <p className="uppercase font-semibold line-clamp-2">
                     Vestido Canelado Colcci
                 </p>
 
