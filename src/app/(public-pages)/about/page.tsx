@@ -11,9 +11,9 @@ export default function About() {
         <main className="w-full">
             <section className="w-full py-20">
                 <div className="w-[80%] m-auto">
-                    <div className="mx-auto px-4 text-center mb-10">
+                    <div className="mx-auto px-4 text-center mb-24">
                         <div className="inline-block mb-4">
-                            <h2 className="text-2xl md:text-4xl font-bold text-primary-red">NOSSA HISTÓRIA</h2>
+                            <h2 className="text-2xl md:text-4xl font-bold text-primary-red uppercase">Nossa Trajetória</h2>
                             <div className="h-[3px] w-6 bg-primary-gray"></div>
                         </div>
 
@@ -103,39 +103,68 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="bg-primary-red text-white py-6 mt-20 mb-36">
-                <div className="w-full text-center">
-                    <h3 className="text-2xl font-semibold uppercase my-4">E HOJE SOMOS</h3>
-                </div>
+            <section className="w-full py-12">
+                <div className="w-[80%] m-auto">
+                    <div className="container flex flex-col items-center mx-auto px-6 md:px-10 text-center">
+                        {/* Título */}
+                        <h2 className="text-4xl font-bold text-primary-red mb-8 uppercase">Castelini: Uma História de Dedicação e Sucesso</h2>
 
-                <div className="container mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-                    <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
-                        <FaStore size={40} />
-                        <h4 className="text-2xl md:text-3xl font-semibold mt-2">25</h4>
-                        <p className="text-sm md:text-base">Lojas</p>
-                    </div>
-
-                    <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
-                        <FaClock size={40} />
-                        <h4 className="text-2xl md:text-3xl font-semibold mt-2">+ de 39 anos</h4>
-                        <p className="text-sm md:text-base">De história</p>
-                    </div>
-
-                    <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
-                        <FaUsers size={40} />
-                        <h4 className="text-2xl md:text-3xl font-semibold mt-2">200+</h4>
-                        <p className="text-sm md:text-base">Funcionários</p>
-                    </div>
-
-                    <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
-                        <FaRegUser size={40} />
-                        <h4 className="text-2xl md:text-3xl font-semibold mt-2">50.000+</h4>
-                        <p className="text-sm md:text-base">Clientes</p>
+                        {/* Vídeo Responsivo */}
+                        <div className="w-full max-w-xl">
+                            <div className="relative pb-[56.25%] h-0">
+                                <iframe
+                                    className="absolute top-0 left-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/qPFkBFjMa3o?si=vsKh27C8hoQd7mml"
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section className="bg-slate-100 py-20 mb-36">
+            <section className="mt-20 mb-36">
+                <div className="w-full flex justify-center">
+                    <div className="inline-block mb-4">
+                        <h2 className="text-xl md:text-2xl font-bold text-primary-gray uppercase">E hoje somos</h2>
+                        <div className="h-[3px] w-6 bg-primary-red"></div>
+                    </div>
+                </div>
+
+                <div className="bg-primary-red text-white py-6">
+                    <div className="container mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                        <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+                            <FaStore size={40} />
+                            <h4 className="text-2xl md:text-3xl font-semibold mt-2">25</h4>
+                            <p className="text-sm md:text-base">Lojas</p>
+                        </div>
+
+                        <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+                            <FaClock size={40} />
+                            <h4 className="text-2xl md:text-3xl font-semibold mt-2">+ de 39 anos</h4>
+                            <p className="text-sm md:text-base">De história</p>
+                        </div>
+
+                        <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+                            <FaUsers size={40} />
+                            <h4 className="text-2xl md:text-3xl font-semibold mt-2">200+</h4>
+                            <p className="text-sm md:text-base">Colaboradores</p>
+                        </div>
+
+                        <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+                            <FaRegUser size={40} />
+                            <h4 className="text-2xl md:text-3xl font-semibold mt-2">50.000+</h4>
+                            <p className="text-sm md:text-base">Clientes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-slate-200 py-20 mb-36">
                 <div className="container mx-auto px-6 md:px-10">
                     <h2 className="text-4xl font-bold text-primary-red mb-8 text-center">Nossa Missão, Visão e Valores</h2>
 
