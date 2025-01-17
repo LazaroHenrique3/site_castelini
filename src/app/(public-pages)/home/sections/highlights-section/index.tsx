@@ -17,13 +17,6 @@ export const HighlightsSection = () => (
                     <p className="font-semibold text-base text-slate-600">Fique por dentro das novidades no Blog Castelini</p>
                 </div>
             </a>
-
-            <a href="https://crediario.castelini.com.br/login" target="_blank" rel="noopener noreferrer" aria-label="Ir para crediário online">
-                <div className="w-[300px] flex gap-3 items-center justify-center p-2 rounded-lg border-2 border-gray-300 shrink-0">
-                    <FaWallet size={32} className="text-slate-600" />
-                    <p className="font-semibold text-base text-slate-600">Pague sua fatura no crediário online</p>
-                </div>
-            </a>
         </div>
     </section>
 );
