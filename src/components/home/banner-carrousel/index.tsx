@@ -1,5 +1,5 @@
 "use client"
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,27 +13,10 @@ import './styles.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { IBannerSwipperImagesProps } from '@/types/IBannerSwipperImagesProps';
 
-import imageOne from '../../../../public/images/banner/banner-image-1.jpg';
-import imageTwo from '../../../../public/images/banner/banner-image-2.jpg';
-import imageThree from '../../../../public/images/banner/banner-image-3.jpg';
-import imageFour from '../../../../public/images/banner/banner-image-4.jpg';
-import imageFive from '../../../../public/images/banner/banner-image-5.jpg';
 
-interface IBannerSwipperImagesType {
-  urlImage: StaticImageData;
-  description: string;
-}
-
-const bannerImages: IBannerSwipperImagesType[] = [
-  { urlImage: imageOne, description: 'Mulher com jaqueta' },
-  { urlImage: imageTwo, description: 'Mulher com bolsa e cadernos' },
-  { urlImage: imageThree, description: 'Mulher com jaqueta e regata branca' },
-  { urlImage: imageFour, description: 'Mulher com roupa dourada' },
-  { urlImage: imageFive, description: 'Mulher com chapéu e calça bege' }
-]
-
-export const BannerCarrousel = () => {
+export const BannerCarrousel = ({ bannerImages }: { bannerImages: IBannerSwipperImagesProps[]}) => {
   return (
     <div className='w-full h-full swiper-container'>
       <Swiper

@@ -18,7 +18,7 @@ export function StoresSection() {
             <div className="w-full">
                 <div className="w-[80%] m-auto flex justify-center">
                     <div className="flex flex-col lg:flex-row items-center gap-10">
-                        <Image className="w-[550px]" src={ourStores} alt="founders-photo" />
+                        <Image className="w-[550px] rounded-lg shadow-2xl" src={ourStores} alt="ours-store" />
 
                         <div className="max-w-[500px]">
                             <div className="mb-6">
