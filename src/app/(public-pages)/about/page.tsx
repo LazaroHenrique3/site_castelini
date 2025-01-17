@@ -1,19 +1,25 @@
 import Image from "next/image";
 import { FaStore, FaClock, FaUsers, FaRegUser } from 'react-icons/fa';
-import { FaBullseye, FaHandshake } from 'react-icons/fa';
-
-import originalFounders from '../../../../public/images/others/original-founders.jpg'
+import originalFounders from '../../../../public/images/others/original-founders.jpg';
 import casteliniDnaStore from '../../../../public/images/others/castelini-dna-store.jpg'
+
+import mission from '../../../../public/images/others/mission.jpg';
+import vision from '../../../../public/images/others/vision.jpg';
+import purpose from '../../../../public/images/others/purpose.jpg';
+import values from '../../../../public/images/others/values.jpg'
+
+import hanger from '../../../../public/images/others/hanger.png';
+
 import { PrimaryLinkButton } from "@/components/primary-link-button";
 
 export default function About() {
     return (
         <main className="w-full">
             <section className="w-full py-20">
-                <div className="w-[80%] m-auto">
+                <div className="w-[95%] lg:w-[80%] m-auto">
                     <div className="mx-auto px-4 text-center mb-24">
                         <div className="inline-block mb-4">
-                            <h2 className="text-2xl md:text-4xl font-bold text-primary-red uppercase">Nossa Trajetória</h2>
+                            <h2 className="text-4xl font-bold text-primary-red uppercase">Nossa Trajetória</h2>
                             <div className="h-[3px] w-6 bg-primary-gray"></div>
                         </div>
 
@@ -60,7 +66,7 @@ export default function About() {
             </section>
 
             <section className="w-full py-20 bg-slate-200">
-                <div className="w-[80%] m-auto">
+                <div className="w-[95%] lg:w-[80%] m-auto">
                     <div className="flex flex-col md:flex-row items-center gap-16">
                         <div className="flex-1 w-full">
                             <Image
@@ -151,13 +157,13 @@ export default function About() {
 
                         <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
                             <FaUsers size={40} />
-                            <h4 className="text-2xl md:text-3xl font-semibold mt-2">200+</h4>
+                            <h4 className="text-2xl md:text-3xl font-semibold mt-2">400+</h4>
                             <p className="text-sm md:text-base">Colaboradores</p>
                         </div>
 
                         <div className="flex flex-col items-center md:items-start text-center md:text-left p-4 w-60 bg-white text-primary-red rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
                             <FaRegUser size={40} />
-                            <h4 className="text-2xl md:text-3xl font-semibold mt-2">50.000+</h4>
+                            <h4 className="text-2xl md:text-3xl font-semibold mt-2">100.000+</h4>
                             <p className="text-sm md:text-base">Clientes</p>
                         </div>
                     </div>
@@ -165,37 +171,80 @@ export default function About() {
             </section>
 
             <section className="bg-slate-200 py-20 mb-36">
-                <div className="container mx-auto px-6 md:px-10">
-                    <h2 className="text-4xl font-bold text-primary-red mb-8 text-center">Nossa Missão, Visão e Valores</h2>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 duration-300">
-                            <FaBullseye size={40} className="mx-auto text-primary-red mb-4" />
-                            <h3 className="text-2xl font-semibold text-primary-red mb-4 text-center uppercase">Missão</h3>
-                            <p className="text-lg text-primary-gray text-justify">
-                                A CASTELINI dedica-se à comercialização de artigos de confecção e calçados de qualidade reconhecida. Os produtos ofertados refletem as tendências da moda atualizada e são ofertados a preços justos que garantam a satisfação dos clientes, fornecedores, colaboradores e acionistas.
-                            </p>
+                <div className="w-[90%] lg:w-[80%] m-auto">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-2 lg:gap-16 mb-16">
+                        <div className="flex-1 w-full">
+                            <Image
+                                src={mission}
+                                alt="Nossa missão"
+                                className="w-full h-auto rounded-lg shadow-2xl object-cover"
+                            />
                         </div>
 
-                        <div className="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 duration-300">
-                            <FaHandshake size={40} className="mx-auto text-primary-red mb-4" />
-                            <h3 className="text-2xl font-semibold text-primary-red mb-4 text-center uppercase">Visão</h3>
-                            <p className="text-lg text-primary-gray text-justify">
-                                Ser reconhecida como empresa referência em qualidade e preços justos no setor em que atua em todas as cidades que fixar suas lojas.
-                            </p>
+                        <div className="flex flex-col">
+                            <div className="flex flex-col">
+                                <Image src={hanger} alt="Logo cabide" className="w-24" />
+                                <h3 className="text-4xl md:text-6xl font-bold text-primary-red mb-4 uppercase">
+                                    Nossa <span className="block ml-6 text-primary-gray">Missão</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-2 lg:gap-16 mb-16">
+                        <div className="flex flex-col">
+                            <div className="flex flex-col">
+                                <Image src={hanger} alt="Logo cabide" className="w-24" />
+                                <h3 className="text-4xl md:text-6xl font-bold text-primary-red mb-4 uppercase">
+                                    Nosso <span className="block ml-6 text-primary-gray">Propósito</span>
+                                </h3>
+                            </div>
                         </div>
 
-                        <div className="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 duration-300">
-                            <FaUsers size={40} className="mx-auto text-primary-red mb-4" />
-                            <h3 className="text-2xl font-semibold text-primary-red mb-4 text-center uppercase">Valores</h3>
-                            <ul className="list-disc pl-3 text-lg text-primary-gray space-y-1">
-                                <li><span className="font-semibold">Amiga </span>em sua relação com as pessoas;</li>
-                                <li><span className="font-semibold">Ética </span>nas relações institucionais;</li>
-                                <li><span className="font-semibold">Familiar </span>em sua relação com colaboradores;</li>
-                                <li><span className="font-semibold">Séria </span>nas suas relações societárias;</li>
-                                <li><span className="font-semibold">Progressiva </span>na sua relação com seus parceiros;</li>
-                                <li><span className="font-semibold">Inovadora </span>na sua relação com as tendências da moda.</li>
-                            </ul>
+                        <div className="flex-1 w-full">
+                            <Image
+                                src={purpose}
+                                alt="Nosso propósito"
+                                className="w-full h-auto rounded-lg shadow-2xl object-cover"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-2 lg:gap-16 mb-16">
+                        <div className="flex-1 w-full">
+                            <Image
+                                src={values}
+                                alt="Nossa missão"
+                                className="w-full h-auto rounded-lg shadow-2xl object-cover"
+                            />
+                        </div>
+
+                        <div className="flex flex-col">
+                            <div className="flex flex-col">
+                                <Image src={hanger} alt="Logo cabide" className="w-24" />
+                                <h3 className="text-4xl md:text-6xl font-bold text-primary-red mb-4 uppercase">
+                                    Nossos <span className="block ml-6 text-primary-gray">Valores</span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-2 lg:gap-16">
+                        <div className="flex flex-col">
+                            <div className="flex flex-col">
+                                <Image src={hanger} alt="Logo cabide" className="w-24" />
+                                <h3 className="text-4xl md:text-6xl font-bold text-primary-red mb-4 uppercase">
+                                    Nossa <span className="block ml-6 text-primary-gray">Visão</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div className="flex-1 w-full">
+                            <Image
+                                src={vision}
+                                alt="Nosso propósito"
+                                className="w-full h-auto rounded-lg shadow-2xl object-cover"
+                            />
                         </div>
                     </div>
                 </div>
