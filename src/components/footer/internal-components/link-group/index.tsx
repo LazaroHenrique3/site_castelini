@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface ILinkGroup {
     title: string;
     links: { label: string; url: string }[];
@@ -12,14 +14,12 @@ export const LinkGroup: React.FC<ILinkGroup> = ({ title, links }) => (
         </li>
         {links.map((link) => (
             <li key={link.label} className="text-center md:text-left">
-                <a
+                <Link
                     href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="text-sm text-white uppercase cursor-pointer hover:underline"
                 >
                     {link.label}
-                </a>
+                </Link>
             </li>
         ))}
     </ul>

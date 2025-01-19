@@ -17,7 +17,7 @@ interface IFooterLinks {
   linkUrl: string;
 }
 
-const FooterLinks: IFooterLinks[] = [
+export const FooterLinks: IFooterLinks[] = [
   { icon: <FaInstagram size={23} className="text-primary-red" />, linkUrl: "https://www.instagram.com/castelinibrasil/?hl=pt-br" },
   { icon: <FaFacebook size={23} className="text-primary-red" />, linkUrl: "https://www.facebook.com/CasteliniBrasil" },
   { icon: <FaYoutube size={23} className="text-primary-red" />, linkUrl: "https://www.youtube.com/channel/UCaTaqBsC4BgVqI1_WWeAzXQ" },
@@ -27,17 +27,17 @@ const FooterLinks: IFooterLinks[] = [
 const footerSections = [
   {
     title: 'Ajuda e Suporte',
-    links: [{ label: 'Fale conosco', url: 'https://www.castelini.com.br/brasnorte/fale-conosco' }]
+    links: [{ label: 'Fale conosco', url: '/contact' }]
   },
   {
     title: 'Faça parte',
-    links: [{ label: 'Trabalhe conosco', url: 'https://www.castelini.com.br/brasnorte/trabalhe-conosco' }]
+    links: [{ label: 'Trabalhe conosco', url: '/work-with-us' }]
   },
   {
     title: 'Grupo Castelini',
     links: [
-      { label: 'Quem somos', url: 'https://www.castelini.com.br/grupo-castelini' },
-      { label: 'Nossas lojas', url: 'https://www.castelini.com.br/nossas-lojas' }
+      { label: 'Quem somos', url: '/about' },
+      { label: 'Nossas lojas', url: '/our-stores' }
     ]
   }
 ];
