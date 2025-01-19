@@ -1,9 +1,22 @@
+'use client'
+import { useEffect } from 'react';
 import Image from 'next/image';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { PrimaryLinkButton } from "@/components/primary-link-button";
 
 import ourStores from '../../../../../../public/images/others/our-stores.png';
 
 export function StoresSection() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    }, []);
+
     return (
         <section className="w-full py-16 bg-slate-200">
             <div className="text-center mb-16 px-2">
@@ -18,9 +31,9 @@ export function StoresSection() {
             <div className="w-full">
                 <div className="w-[80%] m-auto flex justify-center">
                     <div className="flex flex-col lg:flex-row items-center gap-10">
-                        <Image className="w-[550px] rounded-lg shadow-2xl" src={ourStores} alt="ours-store" />
+                        <Image data-aos="fade-right" className="w-[550px] rounded-lg shadow-2xl" src={ourStores} alt="ours-store" />
 
-                        <div className="max-w-[500px]">
+                        <div data-aos="fade-left" className="max-w-[500px]">
                             <div className="mb-6">
                                 <p className="text-2xl font-bold text-gray-800 uppercase">
                                     Espalhados por 3 Estados

@@ -1,7 +1,15 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import 'aos/dist/aos.css';
 
-const inter = Inter({ subsets: ['latin'] })
+import { Montserrat } from 'next/font/google'
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const montserrat = Montserrat({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'Grupo Castelini - Moda dos pés à cabeça',
@@ -15,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body className={montserrat.className}>
+        {children}
+        <ToastContainer position='bottom-right' autoClose={5000} />
+      </body>
     </html>
   )
 }

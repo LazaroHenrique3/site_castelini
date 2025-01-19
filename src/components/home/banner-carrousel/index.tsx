@@ -13,7 +13,7 @@ import './styles.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { IBannerSwipperImagesProps } from '@/types/IBannerSwipperImagesProps';
+import { IBannerSwipperImagesProps } from '@/types/IBannerSwipperImagesTypes';
 
 
 export const BannerCarrousel = ({ bannerImages }: { bannerImages: IBannerSwipperImagesProps[]}) => {

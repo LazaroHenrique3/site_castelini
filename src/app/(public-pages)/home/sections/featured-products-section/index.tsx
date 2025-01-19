@@ -1,9 +1,22 @@
+'use client'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { ProductsSlider } from "@/components/home/products-slider";
 import { PrimaryLinkButton } from "@/components/primary-link-button";
 
 export function FeaturedProductsSection() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    }, []);
+
     return (
-        <section className="w-full pb-16">
+        <section data-aos="zoom-in" className="w-full pb-16">
             <div className="w-full">
                 <div className="w-[80%] m-auto">
                     <div className="mb-2">
