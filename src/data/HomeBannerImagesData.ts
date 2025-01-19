@@ -1,5 +1,5 @@
 
-import { IBannerSwipperImagesType } from '@/types/IBannerSwipperImagesTypes';
+import { IBannerSwipperImagesType } from '@/types/IBannerSwipperImagesType';
 
 import imageOne from '../../public/images/banner/banner-image-1.jpg';
 import imageTwo from '../../public/images/banner/banner-image-2.jpg';

@@ -13,10 +13,9 @@ import './styles.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { IBannerSwipperImagesProps } from '@/types/IBannerSwipperImagesTypes';
+import { IBannerSwipperImagesType } from '@/types/IBannerSwipperImagesType';
 
-
-export const BannerCarrousel = ({ bannerImages }: { bannerImages: IBannerSwipperImagesProps[]}) => {
+export const BannerCarrousel = ({ bannerImages }: { bannerImages: IBannerSwipperImagesType[]}) => {
   return (
     <div className='w-full h-full swiper-container'>
       <Swiper
