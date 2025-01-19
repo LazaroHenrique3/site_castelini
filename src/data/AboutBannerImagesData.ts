@@ -1,4 +1,4 @@
-import { IBannerSwipperImagesType } from '@/types/IBannerSwipperImagesTypes';
+import { IBannerSwipperImagesType } from '@/types/IBannerSwipperImagesType';
 
 import mission from '../../public/images/others/mission.jpg';
 import purpose from '../../public/images/others/purpose.jpg';
