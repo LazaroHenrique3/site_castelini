@@ -1,3 +1,4 @@
+import { usePathname } from 'next/navigation'; 
 import Link from "next/link";
 
 export interface INavLink {
@@ -6,11 +7,15 @@ export interface INavLink {
 }
 
 export const NavLink: React.FC<INavLink> = ({ href, label }) => {
+  const pathname = usePathname(); 
+
+  const isActive = pathname === href;
+
   return (
     <div className="flex flex-col px-2 py-3 group">
       <Link
         href={href}
-        className="text-base font-semibold text-primary-gray uppercase cursor-pointer"
+        className={`text-base font-semibold text-primary-gray uppercase cursor-pointer ${isActive ? 'text-primary-red shadow-md' : ''}`}
       >
         {label}
       </Link>
