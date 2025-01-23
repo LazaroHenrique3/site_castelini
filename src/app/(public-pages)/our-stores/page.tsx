@@ -17,7 +17,7 @@ const filterType: SelectOption[] = [
     { value: 'city/state', label: 'CIDADE/ESTADO' },
 ];
 
-export default function ourStores() {
+export default function OurStores() {
     const [isLoading, setIsLoading] = useState(false);
 
     const [selectedUf, setSelectedUf] = useState<string>('');
