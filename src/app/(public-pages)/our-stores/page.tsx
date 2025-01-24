@@ -11,6 +11,9 @@ import { Input } from '@/components/input';
 import { FiClock, FiMap, FiMapPin, FiPhone } from 'react-icons/fi';
 import { IStoreType } from '@/types/IStoreTypes';
 import { stores } from '@/data/StoresData';
+import Image from 'next/image';
+
+import store from '../../../../public/images/stores/store-brasnorte.jpeg'
 
 const filterType: SelectOption[] = [
     { value: 'cep', label: 'CEP' },
@@ -35,7 +38,7 @@ export default function OurStores() {
 
     return (
         <main className="bg-slate-200">
-            <PageHeaderWithBgImage bgImage={contactImageBanner} pageTitle="Nossas lojas" pageDescription="Com mais de 25 lojas espalhadas por três estados – Paraná, Mato Grosso e Mato Grosso do Sul – estamos sempre perto de você. Cada uma de nossas unidades é pensada para oferecer os melhores produtos e um atendimento de excelência." />
+            <PageHeaderWithBgImage bgImage={contactImageBanner} pageTitle="Nossas lojas" pageDescription="Com 25 lojas espalhadas por três estados – Paraná, Mato Grosso e Mato Grosso do Sul – estamos sempre perto de você. Cada uma de nossas unidades é pensada para oferecer os melhores produtos e um atendimento de excelência." />
             <section className='py-16'>
                 <div className='w-[95%] lg:w-[80%] m-auto'>
 
@@ -102,7 +105,7 @@ export default function OurStores() {
                     </div>
 
                     <div className="flex flex-col mt-5 ">
-                        <div className="flex">
+                        <div className="flex gap-1">
 
                             <div className="w-[780px] border-l-4 pl-4 border-primary-red max-w-2xl">
                                 <div className="flex flex-col items-start bg-slate-50">
@@ -142,41 +145,45 @@ export default function OurStores() {
                                 </div>
                             </div>
 
-                            <div className='w-full bg-slate-100'>
+                            <div className='w-full bg-slate-100 p-4'>
                                 <div className='flex flex-col gap-2 w-full'>
-                                    <div>
-                                        <div className="font-semibold">Icaraíma</div>
-                                        <div className="">Avenida Hermes Vissoto N°944 - Centro</div>
-                                        <div className="">Icaraíma - PR</div>
-                                    </div>
+                                    <div className='flex justify-between'>
+                                        <div>
+                                            <div className='flex flex-col gap-1 font-semibold text-primary-gray'>
+                                                <div className="font-semibold text-black">Icaraíma</div>
+                                                <div className="">Avenida Hermes Vissoto N°944 - Centro</div>
+                                                <div className="">Icaraíma - PR</div>
+                                            </div>
 
-                                    <div className="font-semibold">Funcionamento</div>
+                                            <div className="font-semibold text-black">Funcionamento</div>
 
-                           {/*          <div className="flex items-center gap-2 font-semibold text-primary-gray mb-5">
-                                        <FiMap className="text-xl text-primary-red" />
-                                        <span>{`${selectedStoreInfo.city}, ${selectedStoreInfo.uf}`}</span>
-                                    </div>
-
-                                    <div className="flex items-center gap-2 font-semibold text-primary-gray">
-                                        <FiPhone className="text-xl text-primary-red" />
-                                        <span>{selectedStoreInfo.cellPhone}</span>
-                                    </div>
-
-                                    <div className="flex items-center gap-2 font-semibold text-primary-gray">
-                                        <FiMapPin className="text-xl text-primary-red" />
-                                        <span>{selectedStoreInfo.address}</span>
-                                    </div>
-
-                                    <div className="flex flex-col gap-2 font-semibold text-primary-gray">
-                                        <div className="flex gap-2">
-                                            <FiClock className="text-xl text-primary-red" />
-                                            <span>{`${selectedStoreInfo.openingHours.week.startDay} a ${selectedStoreInfo.openingHours.week.endDay}: ${selectedStoreInfo.openingHours.week.startHour} às ${selectedStoreInfo.openingHours.week.endHour}`}</span>
+                                            <div className="flex flex-col gap-1 font-semibold text-primary-gray">
+                                                <div className="flex gap-2">
+                                                    <span>Seg a Sex: 08:30 às 18h</span>
+                                                </div>
+                                                <span>Sáb 08:00 às 14h</span>
+                                            </div>
                                         </div>
-                                        <span className="ml-7">{`${selectedStoreInfo.openingHours.weekend.startDay} ${selectedStoreInfo.openingHours.weekend.startHour} às ${selectedStoreInfo.openingHours.weekend.endHour}`}</span>
-                                    </div> */}
+
+                                        <Image src={store} alt='loja-brasnorte' className='h-44 object-cover rounded-lg shadow-2xl' />
+                                    </div>
+
+                                    <div className="flex my-1 h-1 items-center justify-center">
+                                        <div className="w-[80%] h-1 bg-primary-red opacity-20"></div>
+                                    </div>
+
+                                    <div className='w-full h-56'>
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.80210896582588!2d-58.00331152520066!3d-12.123525500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93a4cf83ebedd921%3A0x542c21a1f0d871d3!2sCastelini%20Brasnorte!5e0!3m2!1spt-BR!2sbr!4v1737684916931!5m2!1spt-BR!2sbr"
+                                            width="600"
+                                            height="450"
+                                            style={{ border: 0, width: '100%', height: '220px' }}
+                                            allowFullScreen={true} // Define como booleano
+                                            loading="lazy"
+                                            referrerPolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
