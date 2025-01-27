@@ -14,9 +14,10 @@ import { initialValuesWorkWithUsForm } from "@/data/WorkWithUsFormData";
 import { mapCitiesToSelectOptions, mapStatesToSelectOptions, mapStoresToSelectOptions } from "@/app/utils";
 import { brazilCities } from "@/data/CityData";
 import { brazilStates } from "@/data/StatesData";
-import { stores } from "@/data/StoresData";
+import { storesData } from "@/data/StoresData";
 import { InputFile } from "@/components/input-file";
 import { IWorkWithUsFormType } from "@/types/IWorkWithUsFormDataType";
+import { sendWorkWithUsEmailAction } from "@/app/action/email/sendWorkWithUsAction";
 
 interface IWorkWithUsForm {
   onChangeStore: (number: string) => void;
@@ -27,24 +28,45 @@ export const WorkWithUsForm: React.FC<IWorkWithUsForm> = ({ onChangeStore }) => 
   const [selectedUf, setSelectedUf] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const onSubmit = (values: IWorkWithUsFormType, { resetForm }: { resetForm: () => void }) => {
-    const isFormValid = true;
-    setIsLoading(true);
-
-    if (isFormValid) {
-      setIsLoading(false);
-      toast.success("Mensagem enviada com sucesso!");
-      resetForm();
-
-      // Reseta o campo de arquivo manualmente
-      if (fileInputRef.current) {
-        fileInputRef.current.value = ""; // Limpa o valor do input
-      }
-    } else {
-      setIsLoading(false);
-      toast.error("Ocorreu um erro ao enviar a mensagem, volte mais tarde!");
+  const onSubmit = async (values: IWorkWithUsFormType, { resetForm }: { resetForm: () => void }) => {
+    if (!values.curriculum) {
+        console.error('Nenhum currículo foi selecionado');
+        return;
     }
-  };
+
+    const reader = new FileReader();
+
+    reader.onloadend = async () => {
+        const base64File = reader.result as string;
+
+        // Enviar o e-mail com o arquivo em base64
+        const response = await sendWorkWithUsEmailAction({
+            ...values,
+            curriculumBase64: base64File, // Adicionar o arquivo em base64
+        });
+
+        setIsLoading(false);
+
+        /* Caso de erro */
+        if (!response.success) {
+            toast.error('Erro ao enviar mensagem, tente novamente mais tarde!!');
+            console.error(response.error);
+            return;
+        }
+
+        /* Caso de tudo certo */
+        resetForm();
+        toast.success('Mensagem enviada com sucesso!');
+
+        // Reseta o campo de arquivo manualmente
+        if (fileInputRef.current) {
+            fileInputRef.current.value = ""; // Limpa o valor do input
+        }
+    };
+
+    // Inicia a leitura do arquivo
+    reader.readAsDataURL(values.curriculum);
+};
 
   return (
     <Formik
@@ -74,7 +96,7 @@ export const WorkWithUsForm: React.FC<IWorkWithUsForm> = ({ onChangeStore }) => 
                   value={String(values.store)}
                   onChange={handleSelectStoreChange}
                   onBlur={handleBlur}
-                  options={mapStoresToSelectOptions(stores)}
+                  options={mapStoresToSelectOptions(storesData)}
                   placeholder="Selecione a Loja"
                   disabled={isLoading}
                 />

@@ -1,4 +1,4 @@
-import { FaBlog, FaWallet } from "react-icons/fa";
+import { FaBlog, FaUserPlus} from "react-icons/fa";
 import { BsGrid } from "react-icons/bs";
 
 export const HighlightsSection = () => (
@@ -15,6 +15,13 @@ export const HighlightsSection = () => (
                 <div className="w-[300px] flex gap-3 items-center justify-center p-2 rounded-lg border-2 border-gray-300 shrink-0">
                     <FaBlog size={32} className="text-slate-600" />
                     <p className="font-semibold text-base text-slate-600">Fique por dentro das novidades no Blog Castelini</p>
+                </div>
+            </a>
+
+            <a href="https://www.blogcastelini.com.br/cadastro" target="_blank" rel="noopener noreferrer" aria-label="Ir para blog Castelini">
+                <div className="w-[300px] flex gap-3 items-center justify-center p-2 rounded-lg border-2 border-gray-300 shrink-0">
+                    <FaUserPlus size={32} className="text-slate-600" />
+                    <p className="font-semibold text-base text-slate-600">Faça seu cadastro no crediário Castelini</p>
                 </div>
             </a>
         </div>

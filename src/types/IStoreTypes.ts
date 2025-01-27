@@ -1,8 +1,12 @@
+import { StaticImageData } from "next/image";
+
 export interface IStoreType {
-    primaryImage?: string,
-    images?: string[]
+    primaryImage?: StaticImageData,
+    images?: StaticImageData[],
+    mapSrc: string,
     city: string,
     uf: string;
+    cep: string,
     number: string,
     address: string,
     openingHours: {

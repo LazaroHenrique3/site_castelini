@@ -26,7 +26,7 @@ export const PageHeaderWithBgImage: React.FC<IPageHeaderWithBgImage> = ({ bgImag
                     <div className="h-[3px] w-6 bg-white"></div>
                 </div>
 
-                <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed">
+                <p className="text-base md:text-xl text-white max-w-3xl mx-auto leading-relaxed">
                     { pageDescription }
                 </p>
             </div>

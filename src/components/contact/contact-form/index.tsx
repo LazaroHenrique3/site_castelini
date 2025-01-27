@@ -15,7 +15,8 @@ import { IContactFormType } from "@/types/IContactFormDataType";
 import { mapCitiesToSelectOptions, mapStatesToSelectOptions, mapStoresToSelectOptions } from "@/app/utils";
 import { brazilCities } from "@/data/CityData";
 import { brazilStates } from "@/data/StatesData";
-import { stores } from "@/data/StoresData";
+import { storesData } from "@/data/StoresData";
+import { sendContactEmailAction } from "@/app/action/email/sendContactEmailAction";
 
 interface IContactForm {
   onChangeStore: (number: string) => void;
@@ -25,18 +26,22 @@ export const ContactForm: React.FC<IContactForm> = ({ onChangeStore }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedUf, setSelectedUf] = useState<string | null>(null);
 
-  const onSubmit = (values: IContactFormType, { resetForm }: { resetForm: () => void }) => {
-    const isFormValid = true;
+  const onSubmit = async (values: IContactFormType, { resetForm }: { resetForm: () => void }) => {
     setIsLoading(true)
 
-    if (isFormValid) {
-      setIsLoading(false)
-      toast.success('Mensagem enviada com sucesso!');
-      resetForm();
-    } else {
-      setIsLoading(false)
-      toast.error('Ocorreu um erro ao enviar a mensagem, volte mais tarde!');
+    const response = await sendContactEmailAction(values)
+    setIsLoading(false)
+
+    /* Caso de erro */
+    if(!response.success) {
+      toast.error('Erro ao enviar mensagem, tente novamente mais tarde!!');
+      console.error(response.error)
+      return
     }
+
+    /* Caso de tudo certo */
+    resetForm();
+    toast.success('Mensagem enviada com sucesso!');
   };
 
   return (
@@ -67,7 +72,7 @@ export const ContactForm: React.FC<IContactForm> = ({ onChangeStore }) => {
                   value={String(values.store)}
                   onChange={handleSelectStoreChange}
                   onBlur={handleBlur}
-                  options={mapStoresToSelectOptions(stores)}
+                  options={mapStoresToSelectOptions(storesData)}
                   placeholder="Selecione a Loja"
                   disabled={isLoading}
                 />

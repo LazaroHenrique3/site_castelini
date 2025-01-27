@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Esconde a barra de rolagem */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;

@@ -18,17 +18,16 @@ export const validationWorkWithUsFormSchema: Yup.Schema<IWorkWithUsFormType> = Y
   curriculum: Yup.mixed<File>()
     .required('Envie seu currículo')
     .test('isImageOrPdf', 'O currículo deve ser uma imagem (JPEG, PNG, JPG) ou PDF', (value: File | null) => {
-      console.log(value)
+
       if (!value) {
         return false; // Nenhum arquivo foi enviado
       }
-      console.log('Olá 1')
-      console.log(typeof value)
+
       // Verificando se o valor é um arquivo
       if (!(value instanceof File)) {
         return false; // Não é um arquivo válido
       }
-      console.log('Olá 2')
+
       // Verificando o formato do currículo
       const supportedFormats = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf'];
       if (!supportedFormats.includes(value.type)) {
@@ -40,7 +39,7 @@ export const validationWorkWithUsFormSchema: Yup.Schema<IWorkWithUsFormType> = Y
       if (value.size > maxSize) {
         return false; // Tamanho maior que 2MB
       }
-      console.log('Chegou aqui?')
+
       return true; // Validação bem-sucedida
     }),
 });
