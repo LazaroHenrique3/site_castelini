@@ -5,7 +5,7 @@ import workWithUsBanner from '../../../../public/images/others/work-with-us-bann
 
 import { PageHeaderWithBgImage } from "@/components/page-header-with-bg-image";
 import { IStoreType } from "@/types/IStoreTypes";
-import { stores } from "@/data/StoresData";
+import { storesData } from "@/data/StoresData";
 import { WorkWithUsDetailsSection } from "./work-with-us-details-section";
 
 export default function WorkWithUs() {
@@ -13,7 +13,7 @@ export default function WorkWithUs() {
    const [selectedStoreInfo, setSelectedStoreInfo] = useState<IStoreType | null>(null);
 
    const handleStoreSelection = (storeNumber: string) => {
-       const selectedStore = stores.find((store) => store.number === storeNumber);
+       const selectedStore = storesData.find((store) => store.number === storeNumber);
        setSelectedStoreInfo(selectedStore || null); // Define `null` caso não encontre a loja
    };
 

@@ -6,6 +6,7 @@ export interface IStoreType {
     mapSrc: string,
     city: string,
     uf: string;
+    cep: string,
     number: string,
     address: string,
     openingHours: {
