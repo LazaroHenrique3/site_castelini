@@ -17,8 +17,6 @@ const LocationCard: React.FC<LocationCardProps> = ({
   isActive,
   statusColor = "text-green-700", // Valor padrão para a cor do status
 }) => {
-  console.log('Teste: ', isOpen);
-
   return (
     <div
       className={`flex items-center text-sm space-x-4 p-4 bg-slate-50 rounded-md border transition-all duration-300 transform hover:shadow-lg ${isActive ? "border-primary-red" : "border-slate-300"

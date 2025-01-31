@@ -34,7 +34,6 @@ export const sendWorkWithUsEmailService = async ({ city, email, name, message, p
         }
 
         // Se o envio for bem-sucedido, loga o resultado
-        console.log(data);
         return { success: true, data };
     } catch (error: any) {
         // Captura qualquer erro que ocorra no bloco try

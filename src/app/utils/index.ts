@@ -1,4 +1,5 @@
-import { parse, isAfter, getDay } from 'date-fns';
+import { parse, format, isAfter, getDay } from 'date-fns';
+import { ptBR } from "date-fns/locale";
 
 import { SelectOption } from "@/components/input-select";
 import { ICityType } from "@/types/ICityTypes";
@@ -85,10 +86,12 @@ export const mapStoresToSelectOptions = (stores: IStoreType[]): SelectOption[] =
   }));
 };
 
-const normalizeTime = (time: string): string => {
-  // Substituir "h" por ":00" se necessário
-  return time.includes('h') ? time.replace('h', ':00') : time;
-};
+
+//FUNÇÕES DE TEMPO
+export const formattedDate = (date: string): string => {
+  const formattedDate = format(parse(date, "dd/MM/yyyy HH:mm:ss", new Date()), "dd 'de' MMMM 'de' yyyy", { locale: ptBR });
+  return formattedDate;
+}
 
 export const checkClosingTime = (weekdayClosingTime: string, weekendClosingTime: string): boolean => {
   const now = new Date(); // Horário atual
@@ -107,5 +110,11 @@ export const checkClosingTime = (weekdayClosingTime: string, weekendClosingTime:
   // Verificar se o horário de encerramento já passou
   return isAfter(closingDate, now); // Retorna true se o horário de encerramento for maior que o horário atual
 };
+
+const normalizeTime = (time: string): string => {
+  // Substituir "h" por ":00" se necessário
+  return time.includes('h') ? time.replace('h', ':00') : time;
+};
+
 
 

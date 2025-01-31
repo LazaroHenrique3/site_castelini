@@ -21,7 +21,6 @@ export const sendContactEmailService = async ({ city, email, name, message, phon
         }
 
         // Se o envio for bem-sucedido, loga o resultado
-        console.log(data);
         return { success: true, data };
     } catch (error: any) {
         // Captura qualquer erro que ocorra no bloco try

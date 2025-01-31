@@ -10,8 +10,8 @@ import { INavLink, NavLink } from './internal-components/navbar-link';
 export const navLinks: INavLink[] = [
     { href: "/home", label: "Início" },
     { href: "/about", label: "Sobre" },
-    { href: "/contact", label: "Contato" },
     { href: "/our-stores", label: "Nossas Lojas" },
+    { href: "/contact", label: "Contato" },
     { href: "/work-with-us", label: "Trabalhe Conosco" },
 ];
 
