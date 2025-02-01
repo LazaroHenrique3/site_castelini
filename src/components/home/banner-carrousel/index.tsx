@@ -15,7 +15,7 @@ import './styles.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { IBannerSwipperImagesType } from '@/types/IBannerSwipperImagesType';
 
-export const BannerCarrousel = ({ bannerImages }: { bannerImages: IBannerSwipperImagesType[]}) => {
+export const BannerCarrousel = ({ bannerImages }: { bannerImages: IBannerSwipperImagesType[] }) => {
   return (
     <div className='w-full h-full swiper-container'>
       <Swiper
@@ -33,9 +33,15 @@ export const BannerCarrousel = ({ bannerImages }: { bannerImages: IBannerSwipper
         className="mySwiper"
       >
         <>
-          {bannerImages.map((image) => (
-            <SwiperSlide key={image.description}>
-              <Image className="object-contain object-top w-full h-full"  src={image.urlImage} alt={image.description} />
+          {bannerImages.map((image, key) => (
+            <SwiperSlide key={key} className="flex items-center justify-center">
+              <Image
+                src={image.urlImage}
+                alt={image.description}
+                width={1920}
+                height={800}
+                className="w-full h-auto object-contain"
+              />
             </SwiperSlide>
           ))}
         </>
