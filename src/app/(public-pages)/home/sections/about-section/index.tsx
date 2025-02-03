@@ -5,16 +5,16 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import founders from "../../../../../../public/images/others/founders.png";
-import { PrimaryLinkButton } from "@/components/primary-link-button";
+import { PrimaryLinkButton } from "@/components/buttons/primary-link-button";
 
 export const AboutSection = () => {
     useEffect(() => {
         AOS.init({
-            duration: 1000, 
-            easing: 'ease-in-out', 
-            once: true, 
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
         });
-    }, []); 
+    }, []);
 
     return (
         <section className="my-16">
@@ -26,9 +26,9 @@ export const AboutSection = () => {
             </div>
 
             <div className="w-full">
-                <div className="w-[80%] m-auto flex justify-center">
-                    <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
-                        <div data-aos="fade-right" className="max-w-[500px]">
+                <div className="w-[80%] m-auto flex">
+                    <div className="flex flex-col-reverse md:flex-row items-center gap-16 w-full">
+                        <div data-aos="fade-right" className="max-w-[500px] 3xl:max-w-[800px]">
                             <div className="mb-6">
                                 <p className="text-2xl font-bold text-gray-800 uppercase">O início...</p>
                                 <div className="h-[3px] w-6 bg-primary-red"></div>
@@ -43,7 +43,9 @@ export const AboutSection = () => {
                             <PrimaryLinkButton linkText="Conheça nossa Trajetória" linkRef="/about" />
                         </div>
 
-                        <Image data-aos="fade-left" className="w-[550px]" src={founders} alt="Foto dos fundadores" />
+                        <div data-aos="fade-left" className="flex-1 w-full">
+                            <Image className="w-full h-auto rounded-lg object-cover" src={founders} alt="Foto dos fundadores" />
+                        </div>
                     </div>
                 </div>
             </div>

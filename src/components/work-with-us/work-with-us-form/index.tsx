@@ -5,17 +5,17 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { validationWorkWithUsFormSchema } from "./yupValidation";
 
-import { InputSelect } from "@/components/input-select";
-import { Input } from "@/components/input";
-import { InputPhone } from "@/components/input-phone";
-import { InputTextarea } from "@/components/input-textarea";
-import { PrimaryButton } from "@/components/primary-button";
+import { InputSelect } from "@/components/inputs/input-select";
+import { Input } from "@/components/inputs/input";
+import { InputPhone } from "@/components/inputs/input-phone";
+import { InputTextarea } from "@/components/inputs/input-textarea";
+import { PrimaryButton } from "@/components/buttons/primary-button";
 import { initialValuesWorkWithUsForm } from "@/data/WorkWithUsFormData";
 import { mapCitiesToSelectOptions, mapStatesToSelectOptions, mapStoresToSelectOptions } from "@/app/utils";
 import { brazilCities } from "@/data/CityData";
 import { brazilStates } from "@/data/StatesData";
 import { storesData } from "@/data/StoresData";
-import { InputFile } from "@/components/input-file";
+import { InputFile } from "@/components/inputs/input-file";
 import { IWorkWithUsFormType } from "@/types/IWorkWithUsFormDataType";
 import { sendWorkWithUsEmailAction } from "@/app/action/email/sendWorkWithUsAction";
 

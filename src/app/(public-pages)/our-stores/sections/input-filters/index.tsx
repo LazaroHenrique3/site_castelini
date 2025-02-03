@@ -1,7 +1,7 @@
-import { InputSelect, SelectOption } from '@/components/input-select';
+import { InputSelect, SelectOption } from '@/components/inputs/input-select';
 import { mapCitiesStoreToSelectOptions} from '@/app/utils';
 import { storeStateData } from '@/data/StoreStateData';
-import { InputCep } from '@/components/input-cep';
+import { InputCep } from '@/components/inputs/input-cep';
 import { storesData } from '@/data/StoresData';
 
 const filterType: SelectOption[] = [

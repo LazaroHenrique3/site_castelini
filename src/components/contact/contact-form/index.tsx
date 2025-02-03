@@ -5,11 +5,11 @@ import { validationContactFormSchema } from "./yupValidation";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { InputSelect } from "@/components/input-select";
-import { Input } from "@/components/input";
-import { InputPhone } from "@/components/input-phone";
-import { InputTextarea } from "@/components/input-textarea";
-import { PrimaryButton } from "@/components/primary-button";
+import { InputSelect } from "@/components/inputs/input-select";
+import { Input } from "@/components/inputs/input";
+import { InputPhone } from "@/components/inputs/input-phone";
+import { InputTextarea } from "@/components/inputs/input-textarea";
+import { PrimaryButton } from "@/components/buttons/primary-button";
 import { initialValuesContactForm } from "@/data/ContactFormData";
 import { IContactFormType } from "@/types/IContactFormDataType";
 import { mapCitiesToSelectOptions, mapStatesToSelectOptions, mapStoresToSelectOptions } from "@/app/utils";

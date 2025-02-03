@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { ProductsSlider } from "@/components/home/products-slider";
-import { PrimaryLinkButton } from "@/components/primary-link-button";
+import { PrimaryLinkButton } from "@/components/buttons/primary-link-button";
 
 export function FeaturedProductsSection() {
     useEffect(() => {

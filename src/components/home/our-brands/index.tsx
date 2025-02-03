@@ -47,6 +47,8 @@ interface IBransSwiperImagesType {
 
 const bannerImages: IBransSwiperImagesType[] = [
     { urlImage: acostamento, description: 'logo-acostamento' },
+    { urlImage: ogochi, description: 'logo-ogochi' },
+    { urlImage: paco, description: 'logo-paco' },
     { urlImage: adidas, description: 'logo-adidas' },
     { urlImage: baumgarten, description: 'logo-baumgarten' },
     { urlImage: beiraRio, description: 'logo-beira-rio' },
@@ -62,8 +64,6 @@ const bannerImages: IBransSwiperImagesType[] = [
     { urlImage: lunender, description: 'logo-lunender' },
     { urlImage: malwee, description: 'logo-malwee' },
     { urlImage: moleca, description: 'logo-moleca' },
-    { urlImage: ogochi, description: 'logo-ogochi' },
-    { urlImage: paco, description: 'logo-paco' },
     { urlImage: viaMarte, description: 'logo-via-marte' },
     { urlImage: vizzano, description: 'logo-vizzano' },
     { urlImage: westCoast, description: 'logo-west-coast' },
@@ -76,8 +76,8 @@ const bannerImages: IBransSwiperImagesType[] = [
 
 export const OurBrands = () => {
     return (
-        <div className="text-center mb-16 px-7">
-            <div className='mb-8'>
+        <div className="text-center h- mb-16 px-7 flex flex-col justify-center">
+            <div className="mb-8">
                 <p className="text-xl font-bold text-gray-800">
                     Trabalhamos com marcas de <span className="text-4xl font-extrabold text-primary-red">referência no mercado</span>
                 </p>
@@ -86,7 +86,7 @@ export const OurBrands = () => {
                 </p>
             </div>
 
-            <div className='w-full swiper-container brand-swiper'>
+            <div className="w-full brand-swiper flex items-center">
                 <Swiper
                     slidesPerView={3}
                     spaceBetween={30}
@@ -110,13 +110,16 @@ export const OurBrands = () => {
                     }}
                 >
                     {bannerImages.map((image, index) => (
-                        <SwiperSlide key={index}>
-                            <Image
-                                layout="intrinsic"
-                                className="h-auto w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                                src={image.urlImage}
-                                alt={image.description}
-                            />
+                        <SwiperSlide key={index} className="flex justify-center items-center">
+                            <div className="h-full p-4 flex justify-center items-center">
+                                <Image
+                                    width={120}  // Ajustável conforme necessidade
+                                    height={80}  // Ajustável conforme necessidade
+                                    className="object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                                    src={image.urlImage}
+                                    alt={image.description}
+                                />
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
