@@ -11,7 +11,10 @@ module.exports = {
         'primary-red': '#D73D53',
         'primary-gray': '#373B4D',
         'secondary-gray': '#A3A7BE'
-      }
+      },
+      screens: {
+        '3xl': '1920px', // Adiciona o breakpoint 3xl
+      },
     },
   },
   plugins: [],

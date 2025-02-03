@@ -31,6 +31,7 @@ export const ProductsSlider = () => {
             320: { slidesPerView: 1, spaceBetween: 10 }, // Para telas pequenas
             768: { slidesPerView: 2, spaceBetween: 20 }, // Para telas médias
             1024: { slidesPerView: 4, spaceBetween: 30 }, // Para telas grandes
+            1920: { slidesPerView: 5, spaceBetween: 30 } // Telas muito grandes (3xl)
           }}
           modules={[FreeMode, Autoplay, Pagination]}
           className="mySwiper"

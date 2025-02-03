@@ -20,7 +20,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <header className='bg-white sticky top-0 z-40 shadow-lg mx-auto flex w-full items-center justify-between p-2'>
+            <header className='bg-white sticky top-0 z-50 shadow-lg mx-auto flex w-full items-center justify-between p-2'>
                 <section className='w-[95%] md:w-[80%] mx-auto flex items-center justify-between'>
                     <Link href="/home" className='cursor-pointer'>
                         <Image src={casteliniLogo} alt='logo castelini' className='w-28 md:w-40' />

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import { PrimaryLinkButton } from "@/components/primary-link-button";
+import { PrimaryLinkButton } from "@/components/buttons/primary-link-button";
 
 import ourStores from '../../../../../../public/images/others/our-stores.png';
 
@@ -30,10 +30,12 @@ export function StoresSection() {
 
             <div className="w-full">
                 <div className="w-[80%] m-auto flex justify-center">
-                    <div className="flex flex-col lg:flex-row items-center gap-10">
-                        <Image data-aos="fade-right" className="w-[550px] rounded-lg shadow-2xl" src={ourStores} alt="ours-store" />
+                    <div className="flex flex-col lg:flex-row items-center gap-10 w-full">
+                        <div data-aos="fade-right" className="flex-1 w-full">
+                            <Image className="w-full h-auto rounded-lg object-cover" src={ourStores} alt="Foto das lojas no mapa" />
+                        </div>
 
-                        <div data-aos="fade-left" className="max-w-[500px]">
+                        <div data-aos="fade-left" className="max-w-[500px] 3xl:max-w-[800px]">
                             <div className="mb-6">
                                 <p className="text-2xl font-bold text-gray-800 uppercase">
                                     Espalhados por 3 Estados

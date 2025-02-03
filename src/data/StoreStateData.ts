@@ -1,4 +1,4 @@
-import { SelectOption } from "@/components/input-select";
+import { SelectOption } from "@/components/inputs/input-select";
 
 export const storeStateData: SelectOption[] = [
     { value: 'PR', label: 'Paraná' },

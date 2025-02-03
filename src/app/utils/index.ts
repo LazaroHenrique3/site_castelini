@@ -1,7 +1,7 @@
 import { parse, format, isAfter, getDay } from 'date-fns';
 import { ptBR } from "date-fns/locale";
 
-import { SelectOption } from "@/components/input-select";
+import { SelectOption } from "@/components/inputs/input-select";
 import { ICityType } from "@/types/ICityTypes";
 import { IStateType } from "@/types/IStateTypes";
 import { IStoreType } from "@/types/IStoreTypes";
