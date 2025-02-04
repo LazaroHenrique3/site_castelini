@@ -10,5 +10,6 @@ export interface IWorkWithUsFormType {
 }
 
 export interface IWorkWithUsFormTypeWithBase64 extends IWorkWithUsFormType {
+    contentType?: string;
     curriculumBase64: string;  
 }
